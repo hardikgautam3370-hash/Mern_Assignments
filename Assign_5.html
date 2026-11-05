@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments 21–25</title>
+
+    <link rel="stylesheet" href="Assignment_5.css">
+    <script src="Assignment_5.js" defer></script>
+</head>
+<body>
+
+    <header class="hero">
+        <h1>JavaScript Assignments 21–25</h1>
+        <p>Scope, validation, settings, testing and shopping lists</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Assignment 21 -->
+        <section class="card">
+            <h2>Assignment 21: Scope and Hoisting</h2>
+            <p>Predict the output of each example, then reveal the answer and explanation.</p>
+
+            <div class="example">
+                <h3>Example 1: var hoisting</h3>
+                <pre>console.log(value);
+var value = 10;</pre>
+                <button type="button" id="scope-answer-1">Show Answer</button>
+                <p id="scope-result-1" class="result" hidden></p>
+            </div>
+
+            <div class="example">
+                <h3>Example 2: Block scope</h3>
+                <pre>let message = "Hello";
+{
+    let message = "Hi";
+}
+console.log(message);</pre>
+                <button type="button" id="scope-answer-2">Show Answer</button>
+                <p id="scope-result-2" class="result" hidden></p>
+            </div>
+
+            <div class="example">
+                <h3>Example 3: Function scope</h3>
+                <pre>function test() {
+    let score = 90;
+}
+console.log(typeof score);</pre>
+                <button type="button" id="scope-answer-3">Show Answer</button>
+                <p id="scope-result-3" class="result" hidden></p>
+            </div>
+        </section>
+
+        <!-- Assignment 22 -->
+        <section class="card">
+            <h2>Assignment 22: Validation Utility Library</h2>
+            <p>Validate user input using reusable functions and guard clauses.</p>
+
+            <label>Username
+                <input type="text" id="username" placeholder="Enter username">
+            </label>
+
+            <label>Email
+                <input type="text" id="email" placeholder="Enter email">
+            </label>
+
+            <label>Age
+                <input type="number" id="age" placeholder="Enter age">
+            </label>
+
+            <button type="button" id="validate-btn">Validate Details</button>
+            <div id="validation-result" class="result" aria-live="polite"></div>
+        </section>
+
+        <!-- Assignment 23 -->
+        <section class="card">
+            <h2>Assignment 23: Merge Settings and Calculate Totals</h2>
+
+            <p>Default settings:</p>
+            <pre>{ theme: "light", notifications: true, language: "English" }</pre>
+
+            <label>Choose theme
+                <select id="theme">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                </select>
+            </label>
+
+            <label>
+                <input type="checkbox" id="notifications" checked>
+                Enable notifications
+            </label>
+
+            <label>Language
+                <input type="text" id="language" value="English">
+            </label>
+
+            <button type="button" id="merge-settings-btn">Merge Settings</button>
+            <pre id="settings-result" class="result"></pre>
+
+            <hr>
+
+            <h3>Shopping Total Calculator</h3>
+
+            <label>Item 1 price
+                <input type="number" id="price-1" min="0" value="100">
+            </label>
+
+            <label>Item 2 price
+                <input type="number" id="price-2" min="0" value="200">
+            </label>
+
+            <label>Item 3 price
+                <input type="number" id="price-3" min="0" value="50">
+            </label>
+
+            <button type="button" id="calculate-total-btn">Calculate Total</button>
+            <p id="total-result" class="result" aria-live="polite"></p>
+        </section>
+
+        <!-- Assignment 24 -->
+        <section class="card">
+            <h2>Assignment 24: Test Cases and Reflection</h2>
+
+            <p>Use these sample test cases to check the validation utility.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Test</th>
+                        <th>Input</th>
+                        <th>Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Valid username, email and age</td>
+                        <td>Valid</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Empty username</td>
+                        <td>Error message</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Incorrect email format</td>
+                        <td>Error message</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Age below 18</td>
+                        <td>Error message</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Short Reflection</h3>
+            <p>
+                I learned how guard clauses make validation easier to read.
+                I tested valid and invalid inputs and displayed useful error messages.
+                Testing helped me find cases that needed extra checks.
+            </p>
+
+            <button type="button" id="run-tests-btn">Run Sample Tests</button>
+            <div id="test-results" class="result" aria-live="polite"></div>
+        </section>
+
+        <!-- Assignment 25 -->
+        <section class="card">
+            <h2>Assignment 25: Shopping-List Manager</h2>
+            <p>
+                This assignment is console-based. The buttons below provide a simple
+                visual demonstration, and the same manager is also available in the
+                browser console.
+            </p>
+
+            <label>Shopping item
+                <input type="text" id="shopping-item" placeholder="e.g. Notebook">
+            </label>
+
+            <button type="button" id="add-item-btn">Add Item</button>
+            <button type="button" id="show-items-btn">Show List</button>
+            <button type="button" id="clear-items-btn">Clear List</button>
+
+            <ul id="shopping-list"></ul>
+            <p id="shopping-message" class="result" aria-live="polite"></p>
+
+            <p class="hint">
+                Console version: open Developer Tools with F12 and select Console.
+                The JavaScript file prints a short example there.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Web Foundation | Assignments 21–25</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,616 @@
+/* ==============================
+   GLOBAL STYLING
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f4f8;
+    color: #263445;
+    line-height: 1.6;
+}
+
+/* ==============================
+   HEADER
+============================== */
+
+.header {
+    background: linear-gradient(135deg, #173b70, #2467b2);
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+.header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.header p {
+    font-size: 16px;
+}
+
+/* ==============================
+   NAVIGATION
+============================== */
+
+.navbar {
+    background: #1e293b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 9px 13px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    background: #2563eb;
+}
+
+/* ==============================
+   MAIN CONTENT
+============================== */
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+.card {
+    background: white;
+    margin-bottom: 25px;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    border-left: 5px solid #2563eb;
+    scroll-margin-top: 90px;
+}
+
+.card h2 {
+    color: #1d4ed8;
+    font-size: 23px;
+    margin-bottom: 18px;
+}
+
+.card h3 {
+    color: #263445;
+    margin: 18px 0 10px;
+}
+
+.card h4 {
+    margin: 15px 0 8px;
+}
+
+.card p {
+    margin-bottom: 12px;
+}
+
+.card ul {
+    padding-left: 25px;
+    margin: 10px 0 18px;
+}
+
+.card li {
+    margin-bottom: 8px;
+}
+
+/* ==============================
+   INPUTS AND BUTTONS
+============================== */
+
+input[type="text"] {
+    width: 100%;
+    max-width: 350px;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    outline: none;
+    font-size: 15px;
+}
+
+input[type="text"]:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 4px rgba(37, 99, 235, 0.3);
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 11px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1e40af;
+    transform: translateY(-1px);
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 3px solid #f59e0b;
+    outline-offset: 3px;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+/* ==============================
+   DEMO BOX AND OUTPUT
+============================== */
+
+.demo-box {
+    background: #f1f5f9;
+    border: 1px solid #dbe3ed;
+    padding: 20px;
+    border-radius: 9px;
+    margin-top: 20px;
+}
+
+.output {
+    background: white;
+    border-left: 4px solid #16a34a;
+    padding: 13px;
+    margin-top: 15px;
+    border-radius: 5px;
+    min-height: 45px;
+    overflow-wrap: anywhere;
+}
+
+/* ==============================
+   ASSIGNMENT 48
+   LIFECYCLE
+============================== */
+
+.lifecycle-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.lifecycle-step {
+    background: #eaf2ff;
+    padding: 18px;
+    text-align: center;
+    border-radius: 8px;
+    border-bottom: 4px solid #2563eb;
+}
+
+.lifecycle-step h3 {
+    color: #1d4ed8;
+    margin: 0 0 8px;
+}
+
+/* ==============================
+   ASSIGNMENT 49
+   TO-DO APP
+============================== */
+
+.todo-input {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.todo-input input {
+    flex: 1;
+    max-width: none;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 18px 0;
+}
+
+.filter-btn {
+    background: #64748b;
+}
+
+.filter-btn.active {
+    background: #16a34a;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+}
+
+#taskList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 7px;
+    padding: 12px;
+    margin-bottom: 10px;
+}
+
+.task-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.task-info.completed span {
+    text-decoration: line-through;
+    color: #64748b;
+}
+
+.task-actions {
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+}
+
+.edit-btn {
+    background: #d97706;
+}
+
+.delete-btn {
+    background: #dc2626;
+}
+
+.task-summary {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 15px;
+    background: #eaf2ff;
+    border-radius: 8px;
+    margin-top: 18px;
+    color: #1d4ed8;
+    font-weight: bold;
+}
+
+.checklist {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.checklist label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ==============================
+   ASSIGNMENT 51
+   WIREFRAME
+============================== */
+
+.visual-wireframe {
+    max-width: 550px;
+    margin: 20px auto;
+    border: 2px dashed #64748b;
+    padding: 20px;
+    border-radius: 8px;
+    background: #f8fafc;
+}
+
+.wire-header {
+    background: #dbeafe;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+    border: 1px solid #93c5fd;
+    margin-bottom: 18px;
+}
+
+.wire-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border: 1px solid #94a3b8;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.wire-input strong {
+    background: #2563eb;
+    color: white;
+    padding: 7px 12px;
+    border-radius: 4px;
+}
+
+.wire-filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.wire-filters span {
+    border: 1px solid #64748b;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+.wire-task {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border-bottom: 1px solid #cbd5e1;
+}
+
+.wire-footer {
+    text-align: center;
+    font-weight: bold;
+    padding: 15px;
+    background: #e2e8f0;
+    margin-top: 15px;
+}
+
+.user-flow {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.user-flow div:not(.flow-arrow) {
+    background: #dbeafe;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.flow-arrow {
+    font-size: 22px;
+    color: #2563eb;
+    padding: 5px;
+}
+
+/* ==============================
+   ASSIGNMENT 52
+   RESPONSIVE DEMO
+============================== */
+
+.responsive-demo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.responsive-demo div {
+    background: #dbeafe;
+    padding: 25px 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    color: #1e40af;
+}
+
+/* ==============================
+   ASSIGNMENT 53
+   ARCHITECTURE
+============================== */
+
+.architecture-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.architecture-grid div {
+    background: #eff6ff;
+    padding: 18px;
+    border-radius: 8px;
+    border-left: 4px solid #2563eb;
+}
+
+.architecture-grid strong {
+    color: #1d4ed8;
+    font-size: 17px;
+}
+
+.architecture-grid p {
+    margin-top: 6px;
+}
+
+/* ==============================
+   ASSIGNMENT 54
+   README
+============================== */
+
+.readme-box {
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.readme-box h3 {
+    color: #1d4ed8;
+    margin-top: 0;
+}
+
+.readme-box ul {
+    padding-left: 25px;
+}
+
+/* ==============================
+   FOOTER
+============================== */
+
+footer {
+    background: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    margin-top: 35px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+/* ==============================
+   TABLET RESPONSIVENESS
+============================== */
+
+@media (max-width: 768px) {
+
+    .header h1 {
+        font-size: 26px;
+    }
+
+    main {
+        width: 94%;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .lifecycle-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .responsive-demo {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        gap: 5px;
+    }
+
+    .navbar a {
+        font-size: 13px;
+        padding: 8px;
+    }
+}
+
+/* ==============================
+   MOBILE RESPONSIVENESS
+============================== */
+
+@media (max-width: 480px) {
+
+    .header {
+        padding: 25px 12px;
+    }
+
+    .header h1 {
+        font-size: 22px;
+    }
+
+    .header p {
+        font-size: 14px;
+    }
+
+    main {
+        width: 94%;
+        margin: 18px auto;
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+    .card h2 {
+        font-size: 19px;
+    }
+
+    .navbar {
+        position: static;
+        justify-content: flex-start;
+    }
+
+    .navbar a {
+        font-size: 12px;
+    }
+
+    .todo-input {
+        flex-direction: column;
+    }
+
+    .todo-input input {
+        max-width: none;
+    }
+
+    .todo-input button {
+        width: 100%;
+    }
+
+    #taskList li {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .task-actions {
+        width: 100%;
+    }
+
+    .lifecycle-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .architecture-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .checklist {
+        grid-template-columns: 1fr;
+    }
+
+    .task-summary {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wire-task {
+        font-size: 13px;
+    }
+
+    .button-group button {
+        flex: 1 1 100%;
+    }
+}

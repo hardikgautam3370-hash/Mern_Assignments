@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Persistent To-Do App - Final Assessment</title>
+
+    <link rel="stylesheet" href="Assignment_10.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <h1>Persistent To-Do Application</h1>
+        <p>Final Assessment | Assignments 55–62</p>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <a href="#a55">Release Candidate</a>
+        <a href="#a56">Test Matrix</a>
+        <a href="#a57">Bug Log</a>
+        <a href="#a58">Revision</a>
+        <a href="#a59">Dry Run</a>
+        <a href="#a60">Architecture</a>
+        <a href="#a61">Repository</a>
+        <a href="#a62">Reflection</a>
+    </nav>
+
+    <main>
+
+        <!-- ASSIGNMENT 55 -->
+        <section class="card" id="a55">
+
+            <h2>Assignment 55: Feature-Complete Release Candidate</h2>
+
+            <p>
+                This release candidate contains the main features
+                of the Persistent To-Do Application.
+            </p>
+
+            <h3>Implemented Features</h3>
+
+            <ul>
+                <li>Add new tasks.</li>
+                <li>Edit existing tasks.</li>
+                <li>Mark tasks as completed.</li>
+                <li>Delete tasks.</li>
+                <li>Filter tasks by status.</li>
+                <li>Save tasks using localStorage.</li>
+                <li>Responsive user interface.</li>
+                <li>Input validation.</li>
+            </ul>
+
+            <div class="demo-box">
+                <h3>Release Candidate Status</h3>
+
+                <p id="releaseStatus">
+                    Version 1.0 - Ready for testing.
+                </p>
+
+                <button id="releaseCheckBtn">
+                    Check Release Status
+                </button>
+            </div>
+
+        </section>
+
+
+        <!-- ASSIGNMENT 56 -->
+        <section class="card" id="a56">
+
+            <h2>Assignment 56: Completed Test Matrix with Fixes</h2>
+
+            <p>
+                The following test cases verify the main
+                application features.
+            </p>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Test ID</th>
+                            <th>Test Case</th>
+                            <th>Expected Result</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="testMatrixBody">
+
+                        <tr>
+                            <td>TC01</td>
+                            <td>Add Task</td>
+                            <td>Task should be added.</td>
+                            <td>Pending</td>
+                        </tr>
+
+                        <tr>
+                            <td>TC02</td>
+                            <td>Empty Input</td>
+                            <td>Validation message appears.</td>
+                            <td>Pending</td>
+                        </tr>
+
+                        <tr>
+                            <td>TC03</td>
+                            <td>Edit Task</td>
+                            <td>Task should be updated.</td>
+                            <td>Pending</td>
+                        </tr>
+
+                        <tr>
+                            <td>TC04</td>
+                            <td>Delete Task</td>
+                            <td>Task should be removed.</td>
+                            <td>Pending</td>
+                        </tr>
+
+                        <tr>
+                            <td>TC05</td>
+                            <td>Complete Task</td>
+                            <td>Status should change.</td>
+                            <td>Pending</td>
+                        </tr>
+
+                        <tr>
+                            <td>TC06</td>
+                            <td>Persistent Storage</td>
+                            <td>Data should remain after refresh.</td>
+                            <td>Pending</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <button id="runTestsBtn">
+                Run Test Matrix
+            </button>
+
+            <p id="testSummary" class="output">
+                Test results will appear here.
+            </p>
+
+        </section>
+
+
+        <!-- ASSIGNMENT 57 -->
+        <section class="card" id="a57">
+
+            <h2>Assignment 57: Bug Log</h2>
+
+            <p>
+                This section documents common issues,
+                their causes, fixes and verification results.
+            </p>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Issue</th>
+                            <th>Cause</th>
+                            <th>Fix</th>
+                            <th>Verification</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="bugLogBody">
+
+                        <tr>
+                            <td>Empty task added</td>
+                            <td>Missing input validation</td>
+                            <td>Added validateTask()</td>
+                            <td>Passed</td>
+                        </tr>
+
+                        <tr>
+                            <td>Tasks disappear after refresh</td>
+                            <td>Data not saved</td>
+                            <td>Added localStorage</td>
+                            <td>Passed</td>
+                        </tr>
+
+                        <tr>
+                            <td>Filter not working</td>
+                            <td>Incorrect filter condition</td>
+                            <td>Updated filterTasks()</td>
+                            <td>Passed</td>
+                        </tr>
+
+                        <tr>
+                            <td>Updated task not displayed</td>
+                            <td>Missing rendering call</td>
+                            <td>Called renderTasks()</td>
+                            <td>Passed</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <div class="demo-box">
+
+                <h3>Add a Bug Report</h3>
+
+                <input type="text" id="bugIssue"
+                    placeholder="Enter issue">
+
+                <input type="text" id="bugCause"
+                    placeholder="Enter cause">
+
+                <input type="text" id="bugFix"
+                    placeholder="Enter fix">
+
+                <button id="addBugBtn">
+                    Add Bug Report
+                </button>
+
+                <p id="bugOutput" class="output">
+                    Bug report result will appear here.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ASSIGNMENT 58 -->
+        <section class="card" id="a58">
+
+            <h2>Assignment 58: HTML and CSS Revision Challenge</h2>
+
+            <p>
+                This challenge demonstrates HTML structure,
+                CSS styling, responsive layout and form validation.
+            </p>
+
+            <div class="revision-box">
+
+                <h3>Student Information Form</h3>
+
+                <form id="revisionForm">
+
+                    <label for="studentName">
+                        Student Name
+                    </label>
+
+                    <input type="text" id="studentName"
+                        placeholder="Enter your name">
+
+                    <label for="studentEmail">
+                        Email Address
+                    </label>
+
+                    <input type="email" id="studentEmail"
+                        placeholder="Enter your email">
+
+                    <button type="submit">
+                        Submit Information
+                    </button>
+
+                </form>
+
+                <p id="revisionOutput" class="output">
+                    Form result will appear here.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ASSIGNMENT 59 -->
+        <section class="card" id="a59">
+
+            <h2>Assignment 59: Solutions with Dry Runs and Test Cases</h2>
+
+            <h3>Problem 1: Calculate Total Tasks</h3>
+
+            <p>
+                The function counts all tasks and returns
+                the total number.
+            </p>
+
+            <div class="demo-box">
+
+                <button id="dryRunBtn">
+                    Run Dry Run
+                </button>
+
+                <p id="dryRunOutput" class="output">
+                    Dry run result will appear here.
+                </p>
+
+            </div>
+
+            <h3>Test Cases</h3>
+
+            <ul>
+                <li>Input: 0 tasks - Expected: 0</li>
+                <li>Input: 3 tasks - Expected: 3</li>
+                <li>Input: 5 tasks - Expected: 5</li>
+            </ul>
+
+            <h3>Problem 2: Reverse a String</h3>
+
+            <div class="demo-box">
+
+                <input type="text" id="reverseInput"
+                    placeholder="Enter a word">
+
+                <button id="reverseBtn">
+                    Reverse String
+                </button>
+
+                <p id="reverseOutput" class="output">
+                    Reversed text will appear here.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ASSIGNMENT 60 -->
+        <section class="card" id="a60">
+
+            <h2>Assignment 60: Working Challenge and Architecture Explanation</h2>
+
+            <h3>Working Challenge: Task Statistics</h3>
+
+            <p>
+                This challenge calculates task statistics
+                using JavaScript functions.
+            </p>
+
+            <button id="statisticsBtn">
+                Calculate Statistics
+            </button>
+
+            <div id="statisticsOutput" class="output">
+                Statistics will appear here.
+            </div>
+
+            <h3>Architecture Explanation</h3>
+
+            <div class="architecture-grid">
+
+                <div>
+                    <strong>HTML</strong>
+                    <p>Creates the application structure.</p>
+                </div>
+
+                <div>
+                    <strong>CSS</strong>
+                    <p>Controls the visual appearance.</p>
+                </div>
+
+                <div>
+                    <strong>JavaScript</strong>
+                    <p>Handles events and application logic.</p>
+                </div>
+
+                <div>
+                    <strong>localStorage</strong>
+                    <p>Maintains persistent task information.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ASSIGNMENT 61 -->
+        <section class="card" id="a61">
+
+            <h2>Assignment 61: Assessment Repository Submission</h2>
+
+            <h3>Repository Submission Checklist</h3>
+
+            <div class="checklist">
+
+                <label>
+                    <input type="checkbox">
+                    HTML files included
+                </label>
+
+                <label>
+                    <input type="checkbox">
+                    CSS files included
+                </label>
+
+                <label>
+                    <input type="checkbox">
+                    JavaScript files included
+                </label>
+
+                <label>
+                    <input type="checkbox">
+                    All assignments completed
+                </label>
+
+                <label>
+                    <input type="checkbox">
+                    Test cases verified
+                </label>
+
+                <label>
+                    <input type="checkbox">
+                    README documentation added
+                </label>
+
+                <label>
+                    <input type="checkbox">
+                    Repository checked
+                </label>
+
+                <label>
+                    <input type="checkbox">
+                    Final submission completed
+                </label>
+
+            </div>
+
+            <h3>Repository Information</h3>
+
+            <input type="text" id="repositoryLink"
+                placeholder="Paste your repository link">
+
+            <button id="repositoryBtn">
+                Save Repository Link
+            </button>
+
+            <p id="repositoryOutput" class="output">
+                Repository information will appear here.
+            </p>
+
+        </section>
+
+
+        <!-- ASSIGNMENT 62 -->
+        <section class="card" id="a62">
+
+            <h2>Assignment 62: Reflection, Feedback and Portfolio Update</h2>
+
+            <h3>Project Reflection</h3>
+
+            <p>
+                During this project, I learned how to create
+                interactive web applications using HTML,
+                CSS and JavaScript.
+            </p>
+
+            <h3>Skills Learned</h3>
+
+            <ul>
+                <li>HTML page structure.</li>
+                <li>CSS styling and responsive design.</li>
+                <li>JavaScript functions and events.</li>
+                <li>DOM manipulation.</li>
+                <li>Array methods and objects.</li>
+                <li>localStorage and persistent data.</li>
+                <li>Testing and debugging.</li>
+            </ul>
+
+            <h3>Feedback and Improvement Actions</h3>
+
+            <textarea id="feedbackInput"
+                placeholder="Write your feedback and improvement actions..."></textarea>
+
+            <h3>Portfolio Link</h3>
+
+            <input type="text" id="portfolioLink"
+                placeholder="Enter your updated portfolio link">
+
+            <button id="portfolioBtn">
+                Save Reflection
+            </button>
+
+            <p id="reflectionOutput" class="output">
+                Reflection result will appear here.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h3>Persistent To-Do Application</h3>
+
+        <p>Final Assessment - Assignments 55 to 62</p>
+
+        <p>Web Foundation | HTML CSS JavaScript</p>
+
+    </footer>
+
+
+    <script src="Assignment_10.js"></script>
+
+</body>
+</html>

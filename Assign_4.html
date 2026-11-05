@@ -1,0 +1,145 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Assignments 16-20</title>
+    <link rel="stylesheet" href="Assignment_4.css">
+    <script src="Assignment_4.js" defer></script>
+</head>
+<body>
+
+    <header class="hero">
+        <h1>JavaScript Assignments 16–20</h1>
+        <p>Learn conditionals, loops, debugging and functions.</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Assignment 16 -->
+        <section class="card">
+            <h2>Assignment 16: Grade Calculator</h2>
+            <p>Enter marks for five subjects out of 100.</p>
+
+            <form id="grade-form">
+                <label>Subject 1:
+                    <input type="number" class="marks" min="0" max="100" required value="80">
+                </label>
+                <label>Subject 2:
+                    <input type="number" class="marks" min="0" max="100" required value="75">
+                </label>
+                <label>Subject 3:
+                    <input type="number" class="marks" min="0" max="100" required value="88">
+                </label>
+                <label>Subject 4:
+                    <input type="number" class="marks" min="0" max="100" required value="70">
+                </label>
+                <label>Subject 5:
+                    <input type="number" class="marks" min="0" max="100" required value="82">
+                </label>
+
+                <button type="submit">Calculate Grade</button>
+            </form>
+
+            <p id="grade-result" class="result" aria-live="polite"></p>
+        </section>
+
+        <!-- Assignment 17 -->
+        <section class="card">
+            <h2>Assignment 17: Loop-Based Problems</h2>
+
+            <label>Enter a number (1–30):
+                <input type="number" id="loop-number" min="1" max="30" value="5">
+            </label>
+
+            <button type="button" id="run-loops">Run Loop Examples</button>
+
+            <h3>Numbers from 1 to N</h3>
+            <pre id="sequence-output"></pre>
+
+            <h3>Sum from 1 to N</h3>
+            <pre id="sum-output"></pre>
+
+            <h3>Multiplication Table</h3>
+            <pre id="table-output"></pre>
+        </section>
+
+        <!-- Assignment 18 -->
+        <section class="card">
+            <h2>Assignment 18: Debug JavaScript</h2>
+
+            <p><strong>Buggy code:</strong></p>
+            <pre>if (score = 50) {
+    console.log("Score is 50");
+}</pre>
+
+            <p>The assignment operator (=) changes a value instead of comparing it.</p>
+            <p><strong>Fixed code:</strong></p>
+            <pre>if (score === 50) {
+    console.log("Score is 50");
+}</pre>
+
+            <label>Enter score:
+                <input type="number" id="debug-score" min="0" max="100" value="50">
+            </label>
+
+            <button type="button" id="test-debug">Test Fixed Code</button>
+            <p id="debug-result" class="result" aria-live="polite"></p>
+        </section>
+
+        <!-- Assignment 19: Mini Project 1 -->
+        <section class="card">
+            <h2>Assignment 19: Mini Project 1 — Student Result</h2>
+
+            <label>Student Name:
+                <input type="text" id="student-name" value="Aarav">
+            </label>
+
+            <label>Marks out of 100:
+                <input type="number" id="student-marks" min="0" max="100" value="76">
+            </label>
+
+            <button type="button" id="student-summary-btn">Generate Result</button>
+            <p id="student-summary" class="result" aria-live="polite"></p>
+        </section>
+
+        <!-- Assignment 19: Mini Project 2 -->
+        <section class="card">
+            <h2>Mini Project 2 — Number Analyzer</h2>
+
+            <label>Enter a whole number (0–12):
+                <input type="number" id="analyzer-number" min="0" max="12" value="5">
+            </label>
+
+            <button type="button" id="analyze-number-btn">Analyze Number</button>
+            <p id="analyzer-result" class="result" aria-live="polite"></p>
+        </section>
+
+        <!-- Assignment 20 -->
+        <section class="card">
+            <h2>Assignment 20: Mathematical Functions</h2>
+            <p>Try five reusable mathematical functions.</p>
+
+            <label>First Number:
+                <input type="number" id="math-a" value="20">
+            </label>
+
+            <label>Second Number:
+                <input type="number" id="math-b" value="5">
+            </label>
+
+            <button type="button" id="run-math">Calculate</button>
+
+            <div id="math-results" class="result" aria-live="polite"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Web Foundation — JavaScript Practical Assignments</p>
+    </footer>
+
+</body>
+</html>
+```

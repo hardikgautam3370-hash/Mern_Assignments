@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments 38–46 | Interactive Web Project</title>
+
+    <link rel="stylesheet" href="Assignment_8.css">
+    <script src="Assignment_8.js" defer></script>
+</head>
+<body>
+
+    <header class="hero">
+        <h1>Interactive Web Projects</h1>
+        <p>Assignments 38–46: DOM, Forms, Storage and Testing</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Assignment 38: Accessible Interactive Profile -->
+        <section class="card" id="assignment-38">
+            <h2>Assignment 38: Interactive Profile</h2>
+            <p>Update profile states with accessible status messages.</p>
+
+            <div class="profile-box">
+                <h3 id="profile-display-name">Student Profile</h3>
+                <p id="profile-display-bio">Welcome to my interactive profile.</p>
+                <p id="profile-status" class="status" role="status" aria-live="polite">
+                    Status: Available
+                </p>
+
+                <button type="button" id="available-btn" aria-pressed="true">
+                    Available
+                </button>
+
+                <button type="button" id="busy-btn" aria-pressed="false">
+                    Busy
+                </button>
+
+                <button type="button" id="away-btn" aria-pressed="false">
+                    Away
+                </button>
+            </div>
+        </section>
+
+
+        <!-- Assignment 39: Event Map -->
+        <section class="card" id="assignment-39">
+            <h2>Assignment 39: Event Map</h2>
+            <p>View the interactive profile's event map.</p>
+
+            <button type="button" id="show-event-map-btn">
+                Show Event Map
+            </button>
+
+            <pre id="event-map-output" class="result" aria-live="polite"></pre>
+        </section>
+
+
+        <!-- Assignment 40: Reusable Card Rendering -->
+        <section class="card" id="assignment-40">
+            <h2>Assignment 40: Reusable Card Rendering</h2>
+            <p>Generate reusable cards from JavaScript data.</p>
+
+            <button type="button" id="render-cards-btn">
+                Render Cards
+            </button>
+
+            <div id="reusable-cards" class="card-grid"></div>
+        </section>
+
+
+        <!-- Assignment 41: Dynamic Reading List -->
+        <section class="card" id="assignment-41">
+            <h2>Assignment 41: Reading List</h2>
+            <p>Add books and mark them as read.</p>
+
+            <form id="reading-form">
+                <label for="book-title">Book Title</label>
+                <input type="text" id="book-title" required
+                    placeholder="Enter book title">
+
+                <label for="book-author">Author</label>
+                <input type="text" id="book-author" required
+                    placeholder="Enter author name">
+
+                <button type="submit">Add Book</button>
+            </form>
+
+            <div id="reading-list" class="item-list" aria-live="polite"></div>
+        </section>
+
+
+        <!-- Assignment 42: Contact Form -->
+        <section class="card" id="assignment-42">
+            <h2>Assignment 42: Contact Form</h2>
+            <p>Submit the form to display a summary of the entered details.</p>
+
+            <form id="contact-form">
+                <label for="contact-name">Full Name</label>
+                <input type="text" id="contact-name" required
+                    placeholder="Your name">
+
+                <label for="contact-email">Email Address</label>
+                <input type="email" id="contact-email" required
+                    placeholder="you@example.com">
+
+                <label for="contact-subject">Subject</label>
+                <input type="text" id="contact-subject" required
+                    placeholder="Message subject">
+
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" rows="4" required
+                    placeholder="Write your message"></textarea>
+
+                <button type="submit">Submit Contact Form</button>
+            </form>
+
+            <div id="contact-summary" class="result"
+                role="status" aria-live="polite"></div>
+        </section>
+
+
+        <!-- Assignment 43: Validation Test Matrix -->
+        <section class="card" id="assignment-43">
+            <h2>Assignment 43: Validation Test Matrix</h2>
+            <p>Run test cases for common form validation rules.</p>
+
+            <button type="button" id="run-validation-tests-btn">
+                Run Validation Tests
+            </button>
+
+            <div id="validation-test-results" class="result"
+                aria-live="polite"></div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Test</th>
+                            <th>Input</th>
+                            <th>Expected Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Empty name</td>
+                            <td>""</td>
+                            <td>Invalid</td>
+                        </tr>
+                        <tr>
+                            <td>Valid name</td>
+                            <td>"Aman"</td>
+                            <td>Valid</td>
+                        </tr>
+                        <tr>
+                            <td>Invalid email</td>
+                            <td>"abc"</td>
+                            <td>Invalid</td>
+                        </tr>
+                        <tr>
+                            <td>Valid email</td>
+                            <td>"test@example.com"</td>
+                            <td>Valid</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+
+        <!-- Assignment 44: To-Do Application -->
+        <section class="card" id="assignment-44">
+            <h2>Assignment 44: To-Do App</h2>
+            <p>Add, edit, complete, filter and delete tasks.</p>
+
+            <form id="todo-form">
+                <label for="todo-input">Task Name</label>
+                <input type="text" id="todo-input" required
+                    placeholder="Enter a task">
+
+                <button type="submit" id="todo-submit-btn">Add Task</button>
+                <button type="button" id="cancel-edit-btn" hidden>
+                    Cancel Edit
+                </button>
+            </form>
+
+            <div class="filter-buttons" role="group" aria-label="Filter tasks">
+                <button type="button" class="todo-filter" data-filter="all"
+                    aria-pressed="true">All</button>
+                <button type="button" class="todo-filter" data-filter="active"
+                    aria-pressed="false">Active</button>
+                <button type="button" class="todo-filter" data-filter="completed"
+                    aria-pressed="false">Completed</button>
+            </div>
+
+            <p id="todo-count" aria-live="polite">0 tasks</p>
+            <div id="todo-list" class="item-list"></div>
+        </section>
+
+
+        <!-- Assignment 45: Storage Comparison -->
+        <section class="card" id="assignment-45">
+            <h2>Assignment 45: Storage Comparison</h2>
+            <p>Comparison of localStorage and sessionStorage.</p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>localStorage</th>
+                            <th>sessionStorage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lifetime</td>
+                            <td>Until cleared</td>
+                            <td>Usually until the tab session ends</td>
+                        </tr>
+                        <tr>
+                            <td>Scope</td>
+                            <td>Same origin</td>
+                            <td>Same origin and tab session</td>
+                        </tr>
+                        <tr>
+                            <td>Data format</td>
+                            <td>Strings</td>
+                            <td>Strings</td>
+                        </tr>
+                        <tr>
+                            <td>Common use</td>
+                            <td>Saved preferences</td>
+                            <td>Temporary tab data</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>
+                Note: Both storage methods are synchronous. Do not store passwords
+                or other sensitive information in them.
+            </p>
+        </section>
+
+
+        <!-- Assignment 46: Persistent Settings Panel -->
+        <section class="card" id="assignment-46">
+            <h2>Assignment 46: Persistent Settings Panel</h2>
+            <p>Save your preferences and restore them when you revisit the page.</p>
+
+            <form id="settings-form">
+                <label for="settings-name">Display Name</label>
+                <input type="text" id="settings-name"
+                    placeholder="Enter display name">
+
+                <label for="settings-theme">Theme</label>
+                <select id="settings-theme">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                </select>
+
+                <label for="settings-font-size">Font Size</label>
+                <select id="settings-font-size">
+                    <option value="small">Small</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="large">Large</option>
+                </select>
+
+                <label class="checkbox-label" for="settings-notifications">
+                    <input type="checkbox" id="settings-notifications">
+                    Enable notifications preference
+                </label>
+
+                <button type="submit">Save Settings</button>
+                <button type="button" id="reset-settings-btn">
+                    Reset Settings
+                </button>
+            </form>
+
+            <p id="settings-status" class="result"
+                role="status" aria-live="polite"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Web Foundation | Assignments 38–46</p>
+    </footer>
+
+</body>
+</html>

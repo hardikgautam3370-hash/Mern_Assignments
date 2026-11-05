@@ -1,0 +1,407 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persistent To-Do Application</title>
+    <link rel="stylesheet" href="Assignment_9.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <h1>Persistent To-Do Application</h1>
+        <p>Plan your work, manage your tasks and stay organized.</p>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <a href="#todo">To-Do App</a>
+        <a href="#a47">Storage Helper</a>
+        <a href="#a48">Lifecycle</a>
+        <a href="#a50">Project Idea</a>
+        <a href="#a51">Wireframe</a>
+        <a href="#a52">Responsive Design</a>
+        <a href="#a53">Architecture</a>
+        <a href="#a54">Progress Log</a>
+    </nav>
+
+    <main>
+
+        <!-- ASSIGNMENT 47 -->
+        <section class="card" id="a47">
+            <h2>Assignment 47: Reusable Storage Helper Module</h2>
+
+            <p>
+                A reusable storage helper provides functions
+                to save, load, remove and clear data from localStorage.
+            </p>
+
+            <h3>Storage Helper Operations</h3>
+
+            <ul>
+                <li>saveData() - stores data.</li>
+                <li>loadData() - retrieves saved data.</li>
+                <li>removeData() - removes selected data.</li>
+                <li>clearData() - clears application data.</li>
+            </ul>
+
+            <div class="demo-box">
+                <h3>Storage Helper Practical Demo</h3>
+
+                <input type="text" id="storageInput"
+                    placeholder="Enter data to save">
+
+                <div class="button-group">
+                    <button id="saveDataBtn">Save Data</button>
+                    <button id="loadDataBtn">Load Data</button>
+                    <button id="removeDataBtn">Remove Data</button>
+                    <button id="clearDataBtn">Clear All</button>
+                </div>
+
+                <p id="storageOutput" class="output">
+                    Storage result will appear here.
+                </p>
+            </div>
+        </section>
+
+        <!-- ASSIGNMENT 48 -->
+        <section class="card" id="a48">
+            <h2>Assignment 48: Load-Update-Save-Render Lifecycle</h2>
+
+            <p>
+                The application follows four important steps
+                to maintain updated and persistent information.
+            </p>
+
+            <div class="lifecycle-grid">
+                <div class="lifecycle-step">
+                    <h3>1. LOAD</h3>
+                    <p>Retrieve saved tasks from localStorage.</p>
+                </div>
+
+                <div class="lifecycle-step">
+                    <h3>2. UPDATE</h3>
+                    <p>Add, edit, complete or delete tasks.</p>
+                </div>
+
+                <div class="lifecycle-step">
+                    <h3>3. SAVE</h3>
+                    <p>Store updated information.</p>
+                </div>
+
+                <div class="lifecycle-step">
+                    <h3>4. RENDER</h3>
+                    <p>Display updated tasks on the screen.</p>
+                </div>
+            </div>
+
+            <div class="demo-box">
+                <h3>Live Lifecycle Demonstration</h3>
+
+                <button id="runLifecycleBtn">Run Lifecycle</button>
+
+                <div id="lifecycleOutput" class="output">
+                    Click the button to see lifecycle steps.
+                </div>
+            </div>
+        </section>
+
+        <!-- ASSIGNMENT 49 -->
+        <section class="card" id="todo">
+            <h2>Assignment 49: Persistent To-Do Application</h2>
+
+            <p>
+                Manage your daily activities with this
+                persistent task management application.
+            </p>
+
+            <div class="todo-input">
+                <input type="text" id="taskInput"
+                    placeholder="Enter your task...">
+
+                <button id="addTaskBtn">Add Task</button>
+            </div>
+
+            <div class="filters">
+                <button class="filter-btn active"
+                    data-filter="all">All</button>
+
+                <button class="filter-btn"
+                    data-filter="active">Active</button>
+
+                <button class="filter-btn"
+                    data-filter="completed">Completed</button>
+            </div>
+
+            <ul id="taskList"></ul>
+
+            <div class="task-summary">
+                <span id="totalCount">Total: 0</span>
+                <span id="activeCount">Active: 0</span>
+                <span id="completedCount">Completed: 0</span>
+            </div>
+
+            <h3>Testing Checklist</h3>
+
+            <div class="checklist">
+                <label><input type="checkbox"> Add a new task</label>
+                <label><input type="checkbox"> Edit a task</label>
+                <label><input type="checkbox"> Complete a task</label>
+                <label><input type="checkbox"> Delete a task</label>
+                <label><input type="checkbox"> Filter tasks</label>
+                <label><input type="checkbox"> Refresh and verify saved tasks</label>
+                <label><input type="checkbox"> Test empty task validation</label>
+            </div>
+        </section>
+
+        <!-- ASSIGNMENT 50 -->
+        <section class="card" id="a50">
+            <h2>Assignment 50: Project Idea and User Requirements</h2>
+
+            <h3>Project Title</h3>
+            <p>Persistent To-Do Application</p>
+
+            <h3>Project Idea</h3>
+            <p>
+                This application helps users organize daily activities,
+                manage their tasks and track their progress.
+                Task information remains saved even after refreshing
+                the browser.
+            </p>
+
+            <h3>Core Features</h3>
+            <ul>
+                <li>Add new tasks.</li>
+                <li>Edit existing tasks.</li>
+                <li>Mark tasks as completed.</li>
+                <li>Delete unwanted tasks.</li>
+                <li>Filter tasks by status.</li>
+                <li>Save tasks using localStorage.</li>
+                <li>Responsive mobile-friendly interface.</li>
+            </ul>
+
+            <h3>User Requirements</h3>
+            <ul>
+                <li>The interface should be simple and easy to use.</li>
+                <li>Users should be able to manage tasks quickly.</li>
+                <li>Task data should remain saved after refresh.</li>
+                <li>The application should support mobile screens.</li>
+                <li>Invalid or empty task input should be rejected.</li>
+            </ul>
+
+            <h3>Technology Requirements</h3>
+            <p>HTML, CSS, JavaScript and browser localStorage.</p>
+        </section>
+
+        <!-- ASSIGNMENT 51 -->
+        <section class="card" id="a51">
+            <h2>Assignment 51: Wireframes and Documented User Flow</h2>
+
+            <h3>Application Wireframe</h3>
+
+            <div class="visual-wireframe">
+                <div class="wire-header">
+                    PERSISTENT TO-DO APP
+                </div>
+
+                <div class="wire-input">
+                    <span>Enter your task...</span>
+                    <strong>+ Add Task</strong>
+                </div>
+
+                <div class="wire-filters">
+                    <span>All</span>
+                    <span>Active</span>
+                    <span>Completed</span>
+                </div>
+
+                <div class="wire-task">
+                    <span>Task 1</span>
+                    <span>Edit | Delete</span>
+                </div>
+
+                <div class="wire-task">
+                    <span>Task 2</span>
+                    <span>Edit | Delete</span>
+                </div>
+
+                <div class="wire-task">
+                    <span>Task 3</span>
+                    <span>Edit | Delete</span>
+                </div>
+
+                <div class="wire-footer">
+                    Total Tasks: 3
+                </div>
+            </div>
+
+            <h3>Documented User Flow</h3>
+
+            <div class="user-flow">
+                <div>1. User opens the application.</div>
+                <div class="flow-arrow">↓</div>
+                <div>2. Application loads saved tasks.</div>
+                <div class="flow-arrow">↓</div>
+                <div>3. User enters a new task.</div>
+                <div class="flow-arrow">↓</div>
+                <div>4. User clicks Add Task.</div>
+                <div class="flow-arrow">↓</div>
+                <div>5. Application saves and displays the task.</div>
+                <div class="flow-arrow">↓</div>
+                <div>6. User edits, completes or deletes tasks.</div>
+                <div class="flow-arrow">↓</div>
+                <div>7. Application updates the saved information.</div>
+            </div>
+        </section>
+
+        <!-- ASSIGNMENT 52 -->
+        <section class="card" id="a52">
+            <h2>Assignment 52: Responsive Project Scaffold</h2>
+
+            <p>
+                The application uses responsive layouts
+                to support desktop, tablet and mobile devices.
+            </p>
+
+            <h3>Responsive Design Features</h3>
+
+            <ul>
+                <li>Flexible content containers.</li>
+                <li>Responsive navigation bar.</li>
+                <li>Mobile-friendly task input.</li>
+                <li>Flexible task list.</li>
+                <li>Readable typography.</li>
+                <li>Media queries for different screen sizes.</li>
+            </ul>
+
+            <div class="responsive-demo">
+                <div>Desktop Layout</div>
+                <div>Tablet Layout</div>
+                <div>Mobile Layout</div>
+            </div>
+        </section>
+
+        <!-- ASSIGNMENT 53 -->
+        <section class="card" id="a53">
+            <h2>Assignment 53: Architecture Notes and Starter Utilities</h2>
+
+            <h3>Application Architecture</h3>
+
+            <div class="architecture-grid">
+                <div>
+                    <strong>HTML</strong>
+                    <p>Provides the application structure.</p>
+                </div>
+
+                <div>
+                    <strong>CSS</strong>
+                    <p>Controls design and responsive layout.</p>
+                </div>
+
+                <div>
+                    <strong>JavaScript</strong>
+                    <p>Manages application logic and events.</p>
+                </div>
+
+                <div>
+                    <strong>localStorage</strong>
+                    <p>Stores persistent application data.</p>
+                </div>
+            </div>
+
+            <h3>Reusable Utility Functions</h3>
+
+            <ul>
+                <li>generateId() - generates unique task IDs.</li>
+                <li>validateTask() - validates task input.</li>
+                <li>getTaskCount() - calculates task count.</li>
+                <li>saveTasks() - saves tasks.</li>
+                <li>renderTasks() - displays tasks.</li>
+            </ul>
+
+            <div class="demo-box">
+                <h3>Utility Functions Practical Demo</h3>
+
+                <input type="text" id="utilityInput"
+                    placeholder="Enter a task name">
+
+                <div class="button-group">
+                    <button id="validateBtn">Validate Task</button>
+                    <button id="generateIdBtn">Generate ID</button>
+                    <button id="countTasksBtn">Count Tasks</button>
+                </div>
+
+                <p id="utilityOutput" class="output">
+                    Utility output will appear here.
+                </p>
+            </div>
+        </section>
+
+        <!-- ASSIGNMENT 54 -->
+        <section class="card" id="a54">
+            <h2>Assignment 54: Working Core Feature and README Progress Log</h2>
+
+            <h3>Working Core Features</h3>
+
+            <ul>
+                <li>Task creation and editing.</li>
+                <li>Task completion and deletion.</li>
+                <li>Task filtering.</li>
+                <li>Persistent local storage.</li>
+                <li>Responsive application interface.</li>
+            </ul>
+
+            <h3>README Progress Log</h3>
+
+            <div class="readme-box">
+                <h3>Persistent To-Do Application</h3>
+
+                <p><strong>Version:</strong> 1.0</p>
+                <p><strong>Technology:</strong> HTML, CSS, JavaScript</p>
+                <p><strong>Storage:</strong> Browser localStorage</p>
+                <p><strong>Status:</strong> Core implementation completed</p>
+
+                <h4>Completed Work</h4>
+
+                <ul>
+                    <li>HTML application structure completed.</li>
+                    <li>Responsive CSS styling completed.</li>
+                    <li>Reusable storage functions implemented.</li>
+                    <li>Task management features implemented.</li>
+                    <li>Task filtering implemented.</li>
+                    <li>Persistent storage implemented.</li>
+                </ul>
+
+                <h4>Next Steps</h4>
+
+                <ul>
+                    <li>Perform browser testing.</li>
+                    <li>Verify mobile responsiveness.</li>
+                    <li>Check storage error handling.</li>
+                </ul>
+            </div>
+
+            <div class="demo-box">
+                <h3>Core Feature Verification</h3>
+
+                <button id="verifyBtn">Run Feature Tests</button>
+
+                <div id="verificationOutput" class="output">
+                    Click the button to check application features.
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Persistent To-Do Application</p>
+        <p>Assignments 47–54 | Web Foundation</p>
+    </footer>
+
+    <script src="Assignment_9.js"></script>
+
+</body>
+</html>

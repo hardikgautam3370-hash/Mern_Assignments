@@ -1,0 +1,75 @@
+[
+    {
+        "id": 101,
+        "name": "Laptop",
+        "category": "Electronics",
+        "price": 55000,
+        "inStock": true,
+        "specifications": {
+            "brand": "ExampleTech",
+            "processor": "Core i5",
+            "ram": "16 GB",
+            "storage": "512 GB SSD"
+        }
+    },
+    {
+        "id": 102,
+        "name": "Wireless Mouse",
+        "category": "Electronics",
+        "price": 500,
+        "inStock": true,
+        "specifications": {
+            "brand": "TechGear",
+            "connectivity": "Wireless",
+            "color": "Black"
+        }
+    },
+    {
+        "id": 103,
+        "name": "Keyboard",
+        "category": "Electronics",
+        "price": 800,
+        "inStock": true,
+        "specifications": {
+            "brand": "KeyMaster",
+            "connectivity": "USB",
+            "type": "Mechanical"
+        }
+    },
+    {
+        "id": 104,
+        "name": "Notebook",
+        "category": "Stationery",
+        "price": 100,
+        "inStock": true,
+        "specifications": {
+            "brand": "PaperPlus",
+            "pages": 200,
+            "size": "A4"
+        }
+    },
+    {
+        "id": 105,
+        "name": "Pen Set",
+        "category": "Stationery",
+        "price": 150,
+        "inStock": false,
+        "specifications": {
+            "brand": "WriteWell",
+            "quantity": 5,
+            "inkColor": "Blue"
+        }
+    },
+    {
+        "id": 106,
+        "name": "Backpack",
+        "category": "Accessories",
+        "price": 900,
+        "inStock": true,
+        "specifications": {
+            "brand": "TravelMate",
+            "capacity": "25 litres",
+            "color": "Blue"
+        }
+    }
+]

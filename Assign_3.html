@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Foundation - Assignments 11 to 15</title>
+    <link rel="stylesheet" href="Assignment_3.css">
+</head>
+<body>
+
+```
+<header class="header">
+    <h1>WebCraft</h1>
+    <p>Learn. Create. Grow.</p>
+</header>
+
+<nav class="navbar">
+    <a href="#assignment11">Product Grid</a>
+    <a href="#assignment12">Responsive Layout</a>
+    <a href="#assignment13">Landing Page</a>
+    <a href="#assignment14">Final Landing Page</a>
+    <a href="#assignment15">Student Profile</a>
+</nav>
+
+<main>
+
+    <!-- Assignment 11: Product Grid -->
+    <section class="section" id="assignment11">
+        <h2>Assignment 11: Product Grid</h2>
+        <p>Explore our featured products.</p>
+
+        <div class="product-grid">
+
+            <article class="product-card">
+                <div class="product-image">💻</div>
+                <h3>Laptop</h3>
+                <p>For study and programming.</p>
+                <span class="price">₹45,000</span>
+                <button type="button">Explore</button>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">🎧</div>
+                <h3>Headphones</h3>
+                <p>Enjoy music and online classes.</p>
+                <span class="price">₹1,500</span>
+                <button type="button">Explore</button>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">⌚</div>
+                <h3>Smart Watch</h3>
+                <p>A useful everyday accessory.</p>
+                <span class="price">₹2,500</span>
+                <button type="button">Explore</button>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">📱</div>
+                <h3>Smartphone</h3>
+                <p>Stay connected anywhere.</p>
+                <span class="price">₹18,000</span>
+                <button type="button">Explore</button>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Assignment 12: Responsive Layout -->
+    <section class="section" id="assignment12">
+        <h2>Assignment 12: Responsive Layout</h2>
+        <p>Resize the browser to see how the layout changes.</p>
+
+        <div class="responsive-layout">
+            <article class="layout-card">
+                <h3>Web Development</h3>
+                <p>Learn to create websites using HTML, CSS and JavaScript.</p>
+            </article>
+
+            <article class="layout-card">
+                <h3>Artificial Intelligence</h3>
+                <p>Explore intelligent systems and modern AI applications.</p>
+            </article>
+
+            <article class="layout-card">
+                <h3>Programming</h3>
+                <p>Develop problem-solving skills through coding.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Assignment 13: Nice Landing Page -->
+    <section class="section" id="assignment13">
+        <h2>Assignment 13: Landing Page</h2>
+
+        <div class="landing-page">
+            <p class="eyebrow">WELCOME TO WEBCRAFT</p>
+            <h3>Turn Your Ideas Into Digital Experiences</h3>
+            <p>
+                Discover web development, explore new technologies,
+                and start building your skills one project at a time.
+            </p>
+            <a href="#assignment11" class="button">Explore Projects</a>
+        </div>
+    </section>
+
+    <!-- Assignment 14: Fully Responsive Landing Page -->
+    <section class="section" id="assignment14">
+        <h2>Assignment 14: Responsive Landing Page</h2>
+
+        <div class="final-landing">
+            <div class="landing-content">
+                <span class="badge">YOUR LEARNING JOURNEY</span>
+
+                <h3>Build Skills for a Digital Future</h3>
+
+                <p>
+                    Start learning web technologies, create practical
+                    projects, and turn your creativity into useful work.
+                </p>
+
+                <a href="#assignment15" class="button">
+                    Meet Our Student
+                </a>
+            </div>
+
+            <div class="landing-visual" aria-hidden="true">
+                <div class="visual-card">
+                    <span>💡</span>
+                    <h4>Learn</h4>
+                    <p>Discover new ideas</p>
+                </div>
+
+                <div class="visual-card">
+                    <span>💻</span>
+                    <h4>Create</h4>
+                    <p>Build real projects</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Assignment 15: Student Profile -->
+    <section class="section" id="assignment15">
+        <h2>Assignment 15: Student Profile</h2>
+
+        <div class="student-profile">
+            <img class="student-avatar" src="gallery-images/Screenshot%202026-11-05%20211146.png"
+                 alt="Hardik Gautam's profile photo">
+
+            <h3 id="student-name">Student Name</h3>
+            <p id="student-course"></p>
+            <p id="student-year"></p>
+            <p id="student-active"></p>
+
+            <h4>Skills</h4>
+            <ul id="student-skills"></ul>
+
+            <p class="student-bio" id="student-bio"></p>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <p>WebCraft | Web Foundation Assignments 11–15</p>
+</footer>
+
+<script>
+    // Assignment 15: JavaScript Variables and Data Types
+
+    let studentName = "Hardik Gautam";
+    let course = "BCA - Artificial Intelligence";
+    let year = 2;
+    let isActive = true;
+    let skills = ["HTML", "CSS", "JavaScript"];
+
+    let student = {
+        name: studentName,
+        course: course,
+        year: year,
+        isActive: isActive,
+        skills: skills
+    };
+
+    document.getElementById("student-name").textContent = student.name;
+    document.getElementById("student-course").textContent =
+        "Course: " + student.course;
+    document.getElementById("student-year").textContent =
+        "Year: " + student.year;
+    document.getElementById("student-active").textContent =
+        "Active Student: " + student.isActive;
+    document.getElementById("student-bio").textContent =
+        "This profile displays student information using JavaScript variables.";
+
+    let skillsList = document.getElementById("student-skills");
+
+    student.skills.forEach(function(skill) {
+        let item = document.createElement("li");
+        item.textContent = skill;
+        skillsList.appendChild(item);
+    });
+</script>
+```
+
+</body>
+</html>

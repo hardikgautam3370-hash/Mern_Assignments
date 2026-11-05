@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments 31–37 | JavaScript Project</title>
+
+    <link rel="stylesheet" href="Assignment_7.css">
+    <script src="Assignment_7.js" defer></script>
+</head>
+<body>
+
+    <header class="hero">
+        <h1>JavaScript Practical Project</h1>
+        <p>Assignments 31–37: Objects, JSON and DOM Manipulation</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Assignment 31: Shopping Cart Object -->
+        <section class="card" id="assignment-31">
+            <h2>Assignment 31: Shopping Cart</h2>
+            <p>Add products to the cart and calculate the total price.</p>
+
+            <label for="cart-product">Select Product</label>
+            <select id="cart-product">
+                <option value="Laptop">Laptop — ₹55000</option>
+                <option value="Mouse">Mouse — ₹500</option>
+                <option value="Keyboard">Keyboard — ₹800</option>
+                <option value="Headphones">Headphones — ₹1200</option>
+            </select>
+
+            <label for="cart-quantity">Quantity</label>
+            <input type="number" id="cart-quantity" min="1" value="1">
+
+            <button type="button" id="add-to-cart-btn">Add to Cart</button>
+
+            <div id="cart-message" class="result" aria-live="polite"></div>
+
+            <h3>Cart Items</h3>
+            <div id="cart-items" class="result" aria-live="polite">
+                Your cart is empty.
+            </div>
+
+            <h3 id="cart-total">Total: ₹0</h3>
+        </section>
+
+
+        <!-- Assignment 32: Profile Summary -->
+        <section class="card" id="assignment-32">
+            <h2>Assignment 32: Profile Summary Generator</h2>
+            <p>Enter profile details to generate a summary.</p>
+
+            <label for="profile-name">Full Name</label>
+            <input type="text" id="profile-name" placeholder="Enter your name">
+
+            <label for="profile-age">Age</label>
+            <input type="number" id="profile-age" min="1" placeholder="Enter your age">
+
+            <label for="profile-course">Course</label>
+            <input type="text" id="profile-course" placeholder="Enter your course">
+
+            <label for="profile-skills">Skills (comma-separated)</label>
+            <input type="text" id="profile-skills"
+                placeholder="HTML, CSS, JavaScript">
+
+            <button type="button" id="generate-profile-btn">
+                Generate Profile
+            </button>
+
+            <div id="profile-summary" class="result" aria-live="polite"></div>
+        </section>
+
+
+        <!-- Assignment 33: JSON Catalogue -->
+        <section class="card" id="assignment-33">
+            <h2>Assignment 33: Catalogue JSON</h2>
+            <p>Load and validate product catalogue data from a JSON file.</p>
+
+            <button type="button" id="load-catalogue-btn">
+                Load Catalogue
+            </button>
+
+            <div id="catalogue-status" class="result" aria-live="polite">
+                Catalogue has not been loaded yet.
+            </div>
+
+            <div id="catalogue-results" class="result"></div>
+        </section>
+
+
+        <!-- Assignment 34: Tests -->
+        <section class="card" id="assignment-34">
+            <h2>Assignment 34: Test Scenarios</h2>
+            <p>Run validation tests for the catalogue data.</p>
+
+            <button type="button" id="run-catalogue-tests-btn">
+                Run Catalogue Tests
+            </button>
+
+            <div id="catalogue-test-results" class="result"
+                aria-live="polite"></div>
+        </section>
+
+
+        <!-- Assignment 35: DOM Node Relationships -->
+        <section class="card" id="assignment-35">
+            <h2>Assignment 35: DOM Node Relationships</h2>
+            <p>Explore parent, child and sibling relationships in HTML.</p>
+
+            <div id="dom-parent" class="dom-demo">
+                <h3 id="dom-heading">Student Information</h3>
+
+                <p id="dom-student-name">Name: A student</p>
+                <p id="dom-student-course">Course: BCA AI</p>
+
+                <button type="button" id="inspect-dom-btn">
+                    Inspect DOM Relationships
+                </button>
+            </div>
+
+            <div id="dom-results" class="result" aria-live="polite"></div>
+        </section>
+
+
+        <!-- Assignment 36: Element Selection -->
+        <section class="card" id="assignment-36">
+            <h2>Assignment 36: Element Selection Challenge</h2>
+            <p>Practice selecting and updating HTML elements using JavaScript.</p>
+
+            <p id="challenge-text" class="challenge">
+                This is the original text.
+            </p>
+
+            <ul id="challenge-list">
+                <li class="challenge-item">HTML</li>
+                <li class="challenge-item">CSS</li>
+                <li class="challenge-item">JavaScript</li>
+            </ul>
+
+            <button type="button" id="change-text-btn">Change Text</button>
+            <button type="button" id="highlight-items-btn">Highlight Items</button>
+            <button type="button" id="count-items-btn">Count List Items</button>
+
+            <div id="selection-results" class="result" aria-live="polite"></div>
+        </section>
+
+
+        <!-- Assignment 37: Safe Profile Updater -->
+        <section class="card" id="assignment-37">
+            <h2>Assignment 37: Safe Profile Content Updater</h2>
+            <p>Update profile content safely using textContent.</p>
+
+            <label for="update-name">Enter Display Name</label>
+            <input type="text" id="update-name"
+                placeholder="Enter a name or text">
+
+            <label for="update-bio">Enter Profile Bio</label>
+            <textarea id="update-bio" rows="3"
+                placeholder="Write a short bio"></textarea>
+
+            <button type="button" id="update-profile-btn">
+                Update Profile
+            </button>
+
+            <div class="profile-preview">
+                <h3>Profile Preview</h3>
+                <p><strong>Name:</strong> <span id="preview-name">Student</span></p>
+                <p><strong>Bio:</strong> <span id="preview-bio">Welcome to my profile.</span></p>
+            </div>
+
+            <p id="update-message" class="result" aria-live="polite"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Web Foundation | JavaScript Assignments 31-37</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments 26–30</title>
+    <link rel="stylesheet" href="Assignment_6.css">
+    <script src="Assignment_6.js" defer></script>
+</head>
+<body>
+
+    <header class="hero">
+        <h1>JavaScript Assignments 26–30</h1>
+        <p>Data filtering, text cleaning, arrays, testing and objects</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Assignment 26 -->
+        <section class="card">
+            <h2>Assignment 26: Product Dataset</h2>
+            <p>Filter products by category and calculate summary statistics.</p>
+
+            <label>Choose Category
+                <select id="category-filter">
+                    <option value="All">All Categories</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Stationery">Stationery</option>
+                    <option value="Accessories">Accessories</option>
+                </select>
+            </label>
+
+            <label>Minimum Price (₹)
+                <input type="number" id="min-price" min="0" value="0">
+            </label>
+
+            <button type="button" id="filter-products-btn">Filter Products</button>
+
+            <div id="product-results" class="result" aria-live="polite"></div>
+            <p id="product-summary" class="result"></p>
+        </section>
+
+        <!-- Assignment 27 -->
+        <section class="card">
+            <h2>Assignment 27: Text-Cleaning Utility</h2>
+            <p>Clean extra spaces and normalize text entered in a form.</p>
+
+            <label>Enter Text
+                <textarea id="raw-text" rows="4"
+                    placeholder="Example:   hello     WORLD   "></textarea>
+            </label>
+
+            <button type="button" id="clean-text-btn">Clean Text</button>
+
+            <h3>Cleaned Output</h3>
+            <p id="cleaned-output" class="result" aria-live="polite"></p>
+        </section>
+
+        <!-- Assignment 28 -->
+        <section class="card">
+            <h2>Assignment 28: Arrays and Strings</h2>
+
+            <label>Enter numbers separated by commas
+                <input type="text" id="array-input" value="10, 5, 20, 15">
+            </label>
+
+            <button type="button" id="array-problems-btn">Solve Array Problems</button>
+            <div id="array-results" class="result" aria-live="polite"></div>
+
+            <hr>
+
+            <label>Enter a word or sentence
+                <input type="text" id="string-input" value="JavaScript">
+            </label>
+
+            <button type="button" id="string-problems-btn">Solve String Problems</button>
+            <div id="string-results" class="result" aria-live="polite"></div>
+        </section>
+
+        <!-- Assignment 29 -->
+        <section class="card">
+            <h2>Assignment 29: Test Cases and Sample Output</h2>
+            <p>Run test cases for the text-cleaning utility.</p>
+
+            <button type="button" id="run-tests-btn">Run Test Cases</button>
+            <div id="test-results" class="result" aria-live="polite"></div>
+
+            <h3>Sample JavaScript</h3>
+            <pre>function cleanText(text) {
+    return text.trim().replace(/\s+/g, " ");
+}</pre>
+
+            <h3>Sample Output</h3>
+            <pre>Input:  "  Hello    World  "
+Output: "Hello World"</pre>
+        </section>
+
+        <!-- Assignment 30 -->
+        <section class="card">
+            <h2>Assignment 30: Product Object</h2>
+            <p>A product object with nested specifications.</p>
+
+            <button type="button" id="show-product-btn">Show Product Object</button>
+            <pre id="product-object-output" class="result" aria-live="polite"></pre>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Web Foundation | Assignments 26–30</p>
+    </footer>
+
+</body>
+</html>

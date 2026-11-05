@@ -1,0 +1,453 @@
+/* =====================================
+   GENERAL STYLES
+   ===================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #4f46e5;
+    --primary-dark: #3730a3;
+    --background: #f3f5fb;
+    --surface: #ffffff;
+    --text: #263238;
+    --border: #e0e7ff;
+    --result-bg: #eef2ff;
+    --result-text: #312e81;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    transition: background 0.2s, color 0.2s;
+}
+
+.hero {
+    padding: 42px 20px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #3730a3, #818cf8);
+}
+
+.hero h1 {
+    margin: 0 0 10px;
+    font-size: clamp(1.8rem, 5vw, 2.7rem);
+}
+
+.hero p {
+    margin: 0;
+}
+
+.container {
+    width: 92%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+
+/* =====================================
+   CARDS AND HEADINGS
+   ===================================== */
+
+.card {
+    margin-bottom: 25px;
+    padding: 25px;
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.card h2 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    color: var(--primary);
+    border-bottom: 2px solid var(--border);
+}
+
+.card h3 {
+    margin-top: 18px;
+}
+
+
+/* =====================================
+   FORMS AND INPUTS
+   ===================================== */
+
+label {
+    display: block;
+    margin: 14px 0;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    margin-top: 6px;
+    padding: 11px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #a5b4fc;
+    outline-offset: 2px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-label input {
+    width: auto;
+    margin: 0;
+}
+
+
+/* =====================================
+   BUTTONS
+   ===================================== */
+
+button {
+    margin: 6px 5px 6px 0;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 7px;
+    background: var(--primary);
+    color: white;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background: var(--primary-dark);
+}
+
+button:focus-visible {
+    outline: 3px solid #a5b4fc;
+    outline-offset: 3px;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button[aria-pressed="true"] {
+    background: #166534;
+}
+
+
+/* =====================================
+   RESULT AND STATUS BOXES
+   ===================================== */
+
+.result {
+    margin-top: 15px;
+    padding: 14px;
+    border-radius: 8px;
+    background: var(--result-bg);
+    color: var(--result-text);
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.result:empty {
+    display: none;
+}
+
+.status {
+    padding: 10px;
+    background: var(--result-bg);
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+
+/* =====================================
+   ASSIGNMENT 38: INTERACTIVE PROFILE
+   ===================================== */
+
+.profile-box {
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--background);
+}
+
+.profile-box h3 {
+    margin-top: 0;
+}
+
+.profile-box.state-available {
+    border-left: 6px solid #16a34a;
+}
+
+.profile-box.state-busy {
+    border-left: 6px solid #dc2626;
+}
+
+.profile-box.state-away {
+    border-left: 6px solid #d97706;
+}
+
+
+/* =====================================
+   ASSIGNMENT 39: EVENT MAP
+   ===================================== */
+
+pre {
+    overflow-x: auto;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    font-family: Consolas, monospace;
+}
+
+
+/* =====================================
+   ASSIGNMENT 40: REUSABLE CARDS
+   ===================================== */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 18px;
+}
+
+.generated-card {
+    padding: 18px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--background);
+}
+
+.generated-card h3 {
+    margin-top: 0;
+    color: var(--primary);
+}
+
+
+/* =====================================
+   ASSIGNMENT 41: READING LIST
+   ===================================== */
+
+.item-list {
+    display: grid;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.list-item {
+    padding: 15px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: var(--background);
+    overflow-wrap: anywhere;
+}
+
+.list-item h3 {
+    margin: 0 0 6px;
+}
+
+.list-item.completed {
+    opacity: 0.75;
+    border-left: 5px solid #16a34a;
+}
+
+.list-item.completed .item-title {
+    text-decoration: line-through;
+}
+
+
+/* =====================================
+   ASSIGNMENT 43: TEST MATRIX
+   ===================================== */
+
+.table-wrapper {
+    width: 100%;
+    margin-top: 16px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--surface);
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid var(--border);
+    text-align: left;
+}
+
+th {
+    background: var(--result-bg);
+    color: var(--result-text);
+}
+
+
+/* =====================================
+   ASSIGNMENT 44: TO-DO APP
+   ===================================== */
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 15px;
+}
+
+.todo-task {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.todo-task .task-text {
+    flex: 1;
+    min-width: 140px;
+    overflow-wrap: anywhere;
+}
+
+.todo-task .task-checkbox {
+    width: auto;
+    margin: 0;
+}
+
+.todo-task button {
+    margin: 0;
+}
+
+.todo-task.is-completed .task-text {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+
+/* =====================================
+   ASSIGNMENT 46: SETTINGS
+   ===================================== */
+
+#settings-form {
+    max-width: 600px;
+}
+
+
+/* =====================================
+   DARK THEME
+   ===================================== */
+
+body.dark-theme {
+    --background: #111827;
+    --surface: #1f2937;
+    --text: #f3f4f6;
+    --border: #374151;
+    --result-bg: #312e81;
+    --result-text: #eef2ff;
+}
+
+body.dark-theme .profile-box,
+body.dark-theme .generated-card,
+body.dark-theme .list-item {
+    background: #111827;
+}
+
+body.dark-theme input,
+body.dark-theme select,
+body.dark-theme textarea {
+    border-color: #4b5563;
+}
+
+body.dark-theme th {
+    background: #312e81;
+    color: #eef2ff;
+}
+
+
+/* =====================================
+   FONT SIZE SETTINGS
+   ===================================== */
+
+body.font-small {
+    font-size: 14px;
+}
+
+body.font-medium {
+    font-size: 16px;
+}
+
+body.font-large {
+    font-size: 19px;
+}
+
+
+/* =====================================
+   FOOTER
+   ===================================== */
+
+footer {
+    padding: 22px;
+    text-align: center;
+    background: #e0e7ff;
+    color: #312e81;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* =====================================
+   RESPONSIVE DESIGN
+   ===================================== */
+
+@media (max-width: 600px) {
+    .container {
+        width: 94%;
+        margin: 18px auto;
+    }
+
+    .card {
+        padding: 17px;
+    }
+
+    .hero {
+        padding: 32px 15px;
+    }
+
+    .todo-task {
+        align-items: flex-start;
+    }
+
+    .todo-task .task-text {
+        flex-basis: 100%;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+}
